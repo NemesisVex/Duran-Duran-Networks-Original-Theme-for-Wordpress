@@ -28,11 +28,8 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-	<link rel="stylesheet" type="text/css" href="<?php echo VIGILANTMEDIA_CDN_BASE_URI . '/web/css/blueprint/screen.css'; ?>" media="screen, projection">
-	<link rel="stylesheet" type="text/css" href="<?php echo VIGILANTMEDIA_CDN_BASE_URI . '/web/css/blueprint/print.css'; ?>" media="print">
-	<!--[if lt IE 9]>
-	<link type="text/css" href="<?php echo VIGILANTMEDIA_CDN_BASE_URI . '/web/css/blueprint/ie.css'; ?>" media="screen, projection">
-	<![endif]-->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/typography.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="/css/layout.css" media="screen, projection" />
 </head>
@@ -40,17 +37,20 @@
 <body <?php body_class(); ?>>
 		
 	<div id="container" class="container">
-
-		<div id="masthead" class="span-22 prepend-1 append-1 append-bottom">
-			<h1 id="title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php
-			$description = get_bloginfo( 'description', 'display' );
-			if ( ! empty ( $description ) ) :
-		?>
-			<h2><?php echo esc_html( $description ); ?></h2>
-		<?php endif; ?>
+		
+		<div class="row">
+			<div id="masthead" class="col-md-12">
+				<h1 id="title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php
+				$description = get_bloginfo( 'description', 'display' );
+				if ( ! empty ( $description ) ) :
+			?>
+				<h2 id="subtitle"><?php echo esc_html( $description ); ?></h2>
+			<?php endif; ?>
+			</div>
 		</div>
 
-		<div id="content" class="span-22 prepend-1 append-1">
 
-			<div id="frame-1" class="span-15">
+		<div id="content" class="row">
+
+			<div id="frame-1" class="col-md-8">

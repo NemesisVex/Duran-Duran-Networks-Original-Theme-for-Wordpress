@@ -10,7 +10,7 @@
 
 			</div>
 
-			<div id="frame-2" class="prepend-1 span-6 last">
+			<div id="frame-2" class="col-md-4">
 
 				<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 				<nav role="navigation" class="navigation site-navigation secondary-navigation">
