@@ -8,19 +8,14 @@
  * @subpackage Duran_Duran_Networks
  * @since Duran Duran Networks 1.0
  */
+
+namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php ddn_post_thumbnail(); ?>
 
 	<header class="entry-header">
-		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && ddn_categorized_blog() ) : ?>
-		<div class="entry-meta">
-			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'ddn' ) ); ?></span>
-		</div>
 		<?php
-			endif;
-
 			if ( is_single() ) :
 				the_title( '<h3 class="entry-title">', '</h3>' );
 			else :
@@ -29,22 +24,13 @@
 		?>
 
 		<div class="entry-meta">
-			<?php
-				if ( 'post' == get_post_type() )
-					ddn_posted_on();
-				
-				/*
+			<?php if ( 'post' == get_post_type() ): ?>
+				<ul class="list-inline">
+				<?php TemplateTags::posted_on(); ?>
+				</ul>
+			<?php endif; ?>
 
-				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
-			?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'ddn' ), __( '1 Comment', 'ddn' ), __( '% Comments', 'ddn' ) ); ?></span>
-			<?php
-				endif;
-
-				edit_post_link( __( 'Edit', 'ddn' ), '<span class="edit-link">', '</span>' );
-				 * 
-				 */
-			?>
+			<?php  edit_post_link( __( 'Edit', 'ddn' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
