@@ -3,16 +3,14 @@ Theme Name: Duran Duran Networks
 Theme URI: http://duran-duran.net
 Author: Greg Bueno
 Author URI: http://duran-duran.net/
-Description: A custo theme for Duran Duran Networks using Twenty Fourteen as a spring board.
-Version: 1.0
+Description: A custom theme for Duran Duran Networks.
+Version: 2.0
 Text Domain: ddn
 */
-
 .entry-title a {
-	text-decoration: none;
-	color: #000;
+  text-decoration: none;
+  color: #000;
 }
-
 .screen-reader-text {
-	display: none;
+  display: none;
 }

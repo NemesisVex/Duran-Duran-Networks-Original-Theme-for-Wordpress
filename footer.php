@@ -8,11 +8,11 @@
  * @subpackage Duran_Duran_Networks
  * @since Duran Duran Networks 1.0
  */
+
+namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
+
 ?>
 
-		</div>
-
-		
 		<footer id="colophon" class="site-footer row" role="contentinfo">
 			<div class="col-md-12">
 				<?php get_sidebar( 'footer' ); ?>
@@ -24,9 +24,9 @@
 			</div>
 		</footer><!-- #colophon -->
 
-	<?php wp_footer(); ?>
- 		
 	</div><!-- #page -->
-	
+
+	<?php wp_footer(); ?>
+
 </body>
 </html>

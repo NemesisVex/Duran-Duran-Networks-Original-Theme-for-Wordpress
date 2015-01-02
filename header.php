@@ -8,16 +8,11 @@
  * @subpackage Duran_Duran_Networks
  * @since Duran Duran Networks 1.0
  */
+
+namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
+
 ?><!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8) ]><!-->
 <html <?php language_attributes(); ?>>
-<!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
@@ -28,10 +23,6 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="/css/typography.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="/css/layout.css" media="screen, projection" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -52,5 +43,3 @@
 
 
 		<div id="content" class="row">
-
-			<div id="frame-1" class="col-md-8">

@@ -11,38 +11,26 @@
  * @since Duran Duran Networks 1.0
  */
 
-get_header(); ?>
+namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 
-<div id="main-content" class="main-content">
-
-<?php
-	if ( is_front_page() && ddn_has_featured_posts() ) {
-		// Include the featured content template.
-		get_template_part( 'featured-content' );
-	}
 ?>
+<?php get_header(); ?>
+
+<div id="frame-1" class="main-content col-md-8">
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
-			<?php
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
-
-					// Include the page content template.
-					get_template_part( 'content', 'page' );
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-				endwhile;
-			?>
+			<?php while ( have_posts() ) : ?>
+				<?php the_post(); ?>
+				<?php get_template_part( 'content', 'page' ); ?>
+				<?php if ( comments_open() || get_comments_number() ) : ?>
+					<?php comments_template(); ?>
+				<?php endif; ?>
+			<?php endwhile; ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-	<?php get_sidebar( 'content' ); ?>
 </div><!-- #main-content -->
 
-<?php
-get_sidebar( 'ddn' );
-get_footer();
+<?php get_sidebar(); ?>
+<?php get_footer();
