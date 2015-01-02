@@ -13,9 +13,6 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 
 ?>
 
-		</div>
-
-		
 		<footer id="colophon" class="site-footer row" role="contentinfo">
 			<div class="col-md-12">
 				<?php get_sidebar( 'footer' ); ?>
@@ -27,9 +24,9 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 			</div>
 		</footer><!-- #colophon -->
 
-	<?php wp_footer(); ?>
- 		
 	</div><!-- #page -->
-	
+
+	<?php wp_footer(); ?>
+
 </body>
 </html>

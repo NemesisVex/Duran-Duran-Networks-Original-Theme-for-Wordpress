@@ -8,8 +8,6 @@
  */
 ?>
 
-			</div>
-
 			<div id="frame-2" class="col-md-4">
 
 				<?php if ( has_nav_menu( 'secondary' ) ) : ?>
