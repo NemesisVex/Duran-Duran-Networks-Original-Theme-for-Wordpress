@@ -21,8 +21,9 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 ?>
 <?php get_header(); ?>
 
-	<section id="primary" class="content-area row">
-		<div id="content" class="site-content col-md-12" role="main">
+	<div id="frame-1" class="main-content col-md-8">
+		<section id="primary" class="content-area row">
+			<div id="content" class="site-content col-md-12" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -47,8 +48,9 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 			<?php endif; ?>
-		</div><!-- #content -->
-	</section><!-- #primary -->
+			</div><!-- #content -->
+		</section><!-- #primary -->
+	</div>
 
 <?php get_sidebar();?>
 <?php get_footer();

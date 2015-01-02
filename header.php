@@ -43,5 +43,3 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 
 
 		<div id="content" class="row">
-
-			<div id="frame-1" class="col-md-8">

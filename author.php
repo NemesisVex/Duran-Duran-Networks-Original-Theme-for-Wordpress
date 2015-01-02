@@ -14,6 +14,7 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 ?>
 <?php get_header(); ?>
 
+<div id="frame-1" class="main-content col-md-8">
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
@@ -41,6 +42,7 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer();

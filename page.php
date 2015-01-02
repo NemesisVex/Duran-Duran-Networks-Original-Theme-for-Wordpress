@@ -16,8 +16,7 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 ?>
 <?php get_header(); ?>
 
-<div id="main-content" class="main-content">
-
+<div id="frame-1" class="main-content col-md-8">
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
@@ -31,8 +30,7 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-	<?php get_sidebar( 'content' ); ?>
 </div><!-- #main-content -->
 
-<?php get_sidebar( 'ddn' ); ?>
+<?php get_sidebar(); ?>
 <?php get_footer();
