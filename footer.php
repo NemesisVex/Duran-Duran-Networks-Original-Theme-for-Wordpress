@@ -8,6 +8,9 @@
  * @subpackage Duran_Duran_Networks
  * @since Duran Duran Networks 1.0
  */
+
+namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
+
 ?>
 
 		</div>
