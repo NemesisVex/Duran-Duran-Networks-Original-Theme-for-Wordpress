@@ -37,5 +37,5 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 	<?php get_sidebar( 'content'); ?>
 </div><!-- #main-content -->
 
-<?php get_sidebar( 'ddn' ); ?>
+<?php get_sidebar(); ?>
 <?php get_footer();

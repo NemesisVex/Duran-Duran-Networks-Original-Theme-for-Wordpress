@@ -45,6 +45,9 @@ class Setup {
 
 	public static function widgets_init() {
 
+		register_widget( __NAMESPACE__ . '\Widgets\Features' );
+		register_widget( __NAMESPACE__ . '\Widgets\YearlyArchive' );
+
 		register_sidebar( array(
 			'name'          => __( 'Primary Sidebar', WP_TEXT_DOMAIN ),
 			'id'            => 'sidebar-1',

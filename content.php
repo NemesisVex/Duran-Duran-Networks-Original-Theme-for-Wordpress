@@ -15,13 +15,11 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header">
-		<?php
-			if ( is_single() ) :
-				the_title( '<h3 class="entry-title">', '</h3>' );
-			else :
-				the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-			endif;
-		?>
+		<?php if ( is_single() ) : ?>
+			<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
+		<?php else : ?>
+			<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
+		<?php endif; ?>
 
 		<div class="entry-meta">
 			<?php if ( 'post' == get_post_type() ): ?>
@@ -40,15 +38,13 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'ddn' ) );
-			wp_link_pages( array(
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'ddn' ) ); ?>
+		<?php wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'ddn' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-			) );
-		?>
+			) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
