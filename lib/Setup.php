@@ -93,8 +93,7 @@ class Setup {
 		wp_enqueue_style( 'ddn-font-merriweather-sans', '//fonts.googleapis.com/css?family=Merriweather+Sans&subset=latin,latin-ext' );
 		wp_enqueue_style( 'ddn-font-lato', '//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' );
 
-		wp_enqueue_style( 'ddn-typography', '//' . $_SERVER['HTTP_HOST'] . '/css/typography.css' );
-		wp_enqueue_style( 'ddn-layout', '//' . $_SERVER['HTTP_HOST'] . '/css/layout.css' );
+		wp_enqueue_style( 'ddn-base-style', '//' . $_SERVER['HTTP_HOST'] . '/css/style.css' );
 		wp_enqueue_style( 'ddn-style', get_stylesheet_uri() );
 	}
 
