@@ -1,0 +1,17 @@
+/*
+Theme Name: Duran Duran Networks
+Theme URI: http://duran-duran.net
+Author: Greg Bueno
+Author URI: http://duran-duran.net/
+Description: A custom theme for Duran Duran Networks.
+Version: 2.0
+Text Domain: ddn
+*/
+.entry-title a {
+  text-decoration: none;
+  color: #000; }
+
+.screen-reader-text {
+  display: none; }
+
+/*# sourceMappingURL=style.dev.css.map */
