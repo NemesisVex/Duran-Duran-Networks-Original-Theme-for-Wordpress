@@ -12,14 +12,14 @@ namespace VigilantMedia\WordPress\Themes\DuranDuranNetworks\Widgets;
 class Features extends \WP_Widget {
 
 	public function __construct() {
-		parent::__construct( 'widget_ddn_features', __( 'Features', WP_TEXT_DOMAIN ), array(
+		parent::__construct( 'widget_ddn_features', __( 'Features', \VigilantMedia\WordPress\Themes\DuranDuranNetworks\WP_TEXT_DOMAIN ), array(
 			'classname'   => 'widget_ddn_features',
-			'description' => __( 'Links to the Laravel-driven features of the site.', WP_TEXT_DOMAIN ),
+			'description' => __( 'Links to the Laravel-driven features of the site.', \VigilantMedia\WordPress\Themes\DuranDuranNetworks\WP_TEXT_DOMAIN ),
 		) );
 	}
 
 	public function widget( $args, $instance ) {
-		$title = !empty( $instance['title'] ) ? $instance['title'] : translate( 'Features', WP_TEXT_DOMAIN );
+		$title = !empty( $instance['title'] ) ? $instance['title'] : translate( 'Features', \VigilantMedia\WordPress\Themes\DuranDuranNetworks\WP_TEXT_DOMAIN );
 		echo $args['before_widget'];
 		?>
 		<h3><?php echo $title; ?></h3>
