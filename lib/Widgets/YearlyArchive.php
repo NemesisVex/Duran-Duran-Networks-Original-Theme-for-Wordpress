@@ -13,14 +13,14 @@ use VigilantMedia\WordPress\Themes\DuranDuranNetworks;
 class YearlyArchive extends \WP_Widget {
 
 	public function __construct() {
-		parent::__construct( 'widget_ddn_yearly_archive', __( 'Archives (Yearly)', WP_TEXT_DOMAIN ), array(
+		parent::__construct( 'widget_ddn_yearly_archive', __( 'Archives (Yearly)', \VigilantMedia\WordPress\Themes\DuranDuranNetworks\WP_TEXT_DOMAIN ), array(
 			'classname'   => 'widget_ddn_yearly_archive',
-			'description' => __( 'A yearly archive of your site\'s Posts.', WP_TEXT_DOMAIN ),
+			'description' => __( 'A yearly archive of your site\'s Posts.', \VigilantMedia\WordPress\Themes\DuranDuranNetworks\WP_TEXT_DOMAIN ),
 		) );
 	}
 
 	public function widget( $args, $instance ) {
-		$title = !empty( $instance['title'] ) ? $instance['title'] : translate( 'Calendar', WP_TEXT_DOMAIN );
+		$title = !empty( $instance['title'] ) ? $instance['title'] : translate( 'Calendar', \VigilantMedia\WordPress\Themes\DuranDuranNetworks\WP_TEXT_DOMAIN );
 		echo $args['before_widget'];
 		?>
 		<h3><?php echo $title; ?></h3>
